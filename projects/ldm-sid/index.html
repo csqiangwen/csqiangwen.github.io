@@ -127,20 +127,20 @@
                     <center>
                         <div class="compare" style="margin: 10px; width: 80%;">
                             <!-- The after image is last -->
-                            <img class="slider-image" src="./assets/results/10140_00_0.1s/10140_00_0.1s.ARW.jpg"/>
+                            <img class="slider-image" src="./assets/results/0_input.jpg"/>
                             <!-- The before image is first -->
-                            <img id="eld_image" class="slider-image" src="./assets/results/10140_00_0.1s/10140_00_0.1s.ARW_0_eld_38.8426.jpg"/>
-                            <img id="led_image" class="slider-image" style="display: none;" src="./assets/results/10140_00_0.1s/10140_00_0.1s.ARW_5_cf_39.4064.jpg"/>
+                            <img id="exposurediff_image" class="slider-image" src="./assets/results/0_exposurediff.jpg"/>
+                            <img id="ldm_sid_image" class="slider-image" style="display: none;" src="./assets/results/0_ours.jpg"/>
                         </div>
                     </center>
             
                     <div style="width: 80%; display: inline-block; margin-bottom: 9px;">
-                        <button class="btn active" id="eld_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
-                        onclick="toggleimage('eld_image', 'led_image', 'eld_button', 'led_button')"
+                        <button class="btn active" id="exposurediff_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
+                        onclick="toggleimage('exposurediff_image', 'ldm_sid_image', 'exposurediff_button', 'ldm_sid_button')"
                         >ELD</button>
-                        <button class="btn" id="led_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
-                        onclick="toggleimage('led_image', 'eld_image', 'led_button', 'eld_button')"
-                        ><strong>LED (Ours)</strong></button>
+                        <button class="btn" id="ldm_sid_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
+                        onclick="toggleimage('ldm_sid_image', 'exposurediff_image', 'ldm_sid_button', 'exposurediff_button')"
+                        ><strong>LDM-SID (Ours)</strong></button>
                     </div>
                 </div>
               </div>
