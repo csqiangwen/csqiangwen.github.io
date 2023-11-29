@@ -96,32 +96,6 @@
             </div>
         </div>
 
-          <!-- Visual Results -->
-          <div style="background-color: #f5f5f5; margin-right: auto; margin-left: auto;">
-              <div class="root-content" style="padding-top: 10px;">
-                  </div>
-                    <center>
-                        <div class="compare" style="margin: 10px; width: 10%;">
-                            <!-- The after image is last -->
-                            <img class="slider-image" src="./assets/results/0_input.jpg"/>
-                            <!-- The before image is first -->
-                            <img id="exposurediff_image" class="slider-image" src="./assets/results/0_exposurediff.jpg"/>
-                            <img id="ldm_sid_image" class="slider-image" style="display: none;" src="./assets/results/0_ours.jpg"/>
-                        </div>
-                    </center>
-              
-                    <div style="width: 80%; display: inline-block; margin-bottom: 9px;">
-                        <button class="btn active" id="exposurediff_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
-                        onclick="toggleimage('exposurediff_image', 'ldm_sid_image', 'exposurediff_button', 'ldm_sid_button')"
-                        >ExposureDiffusion</button>
-                        <button class="btn" id="ldm_sid_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
-                        onclick="toggleimage('ldm_sid_image', 'exposurediff_image', 'ldm_sid_button', 'exposurediff_button')"
-                        ><b>LDM-SID (Ours)</b></button>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
         <!-- Paper Information -->
         <div class="root-content" style="padding-top: 30px;">
             <!-- Teaser -->
@@ -149,6 +123,27 @@
             <div style="padding-top: 20px;">
                 <h1 class="section-name">Visualized Comparison</h1>
             </div>
+
+            </div>
+                <center>
+                    <div class="compare" style="margin: 10px; width: 80%;">
+                        <!-- The after image is last -->
+                        <img class="slider-image" src="./assets/results/0_input.jpg"/>
+                        <!-- The before image is first -->
+                        <img id="exposurediff_image" class="slider-image" src="./assets/results/0_exposurediff.jpg"/>
+                        <img id="ldm_sid_image" class="slider-image" style="display: none;" src="./assets/results/0_ours.jpg"/>
+                    </div>
+                </center>
+                
+                <div style="width: 80%; display: inline-block; margin-bottom: 9px;">
+                    <button class="btn active" id="exposurediff_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
+                    onclick="toggleimage('exposurediff_image', 'ldm_sid_image', 'exposurediff_button', 'ldm_sid_button')"
+                    >ExposureDiffusion</button>
+                    <button class="btn" id="ldm_sid_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
+                    onclick="toggleimage('ldm_sid_image', 'exposurediff_image', 'ldm_sid_button', 'exposurediff_button')"
+                    ><b>LDM-SID (Ours)</b></button>
+                </div>
+              </div>
               
 
             <div style="margin-bottom: 50px;">
