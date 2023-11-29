@@ -108,26 +108,11 @@
 
             <div style="padding-top: 20px;">
                 <h1 class="section-name">Method</h1>
-                <center><img src="assets/led_pipeline.svg" width="1000"/></center>
+                <center><img src="assets/Framework.jp2" width="1000"/></center>
                 <p class="section-content-text">
-                    Overview of our LED. <br/>
-                    Unlike typical calibration-based algorithms, our method, as shown in the figure, consists of four steps in total:
-                    <br/><br/>
-                    1. Synthetic Noise Generation.<br/>
-                    2. Pre-training the denoiser.<br/>
-                    3. Collecting few-shot paired data using the target camera.<br/>
-                    4. Fine-tuning the denoiser using the data collected in Step 3.<br/>
-                    <br/>
-                    Compared to calibration-based algorithms, LED uses randomly sampled virtual camera parameters during synthetic noise generation, thereby avoiding the calibration process.<br/>
-                    During each iteration of pre-training, a random virtual camera is first selected, and the training is performed using the paired data synthesized with that virtual camera. When the k-th virtual camera is selected, only the k-th CSA (Camera-Specific Alignment) is trained. This approach aims to decouple camera-specific information from noise information.<br/>
-                    During Finetuning, the first step is to average all CSAs to enhance generalization capability. After that, an additional branch is added to handle out-of-model noise. It's important to note that the blue 3x3 convolution is frozen during this process.<br/>
-                    <br/>
-                    <strong style="color: brown;">Note</strong>: The network architecture of LED is exactly the same as other methods during deployment! This is possible thanks to the reparameterization technique. Below are the details regarding these aspects.<br/>
-                    More detail can be found in our main paper.
                     <details>
-                        <summary>Details when deploy</summary>
-                        LED's another highlight lies in its final deployment, where the neural network remains completely consistent with other methods! No additional computational overhead is added, thanks to the following reparameterization process.
-                        <center><img src="assets/rep.svg" width="600"/></center>
+                        <summary>Framework Description</summary>
+                        The overview of our proposed LLIE method, \textbf{\method}. The Bayer RAW image is processed by similar operations mentioned in~\cite{chen2018learning}. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale $\gamma$ and shift $\beta$ parameters. Similar to the low-frequency taming, the features of the decoder $\mathcal{D}$ are modulated by another set of taming modules, where the LL sub-band is mapped to the scale $\gamma$ and the concatenation of LH, HL, HH is mapped to the shift $\beta$. All parameters from the pre-trained Stable Diffusion are \textbf{frozen} and only taming modules are \textbf{trainable}.
                     </details>
                 </p>
             </div>
