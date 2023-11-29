@@ -116,7 +116,7 @@
                 <center><img src="assets/Framework.png" width="800"/></center>
                   <figcaption>
                     <p class="section-content-text">
-                      The overview of our proposed LLIE method, <b>LDM-SID</b>. The Bayer RAW image is processed by similar operations mentioned by Chen et al.. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale &gamma; and shift &beta; parameters. Similar to the low-frequency taming, the features of the decoder &Dscr; are modulated by another set of taming modules, where the LL sub-band is mapped to the scale &gamma; and the concatenation of LH, HL, HH is mapped to the shift &beta;. All parameters from the pre-trained Stable Diffusion are <b>frozen</b> and only taming modules are <b>trainable</b>.
+                      The overview of our proposed LLIE method, <b>LDM-SID</b>. The Bayer RAW image is processed by similar operations mentioned in [1]. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale &gamma; and shift &beta; parameters. Similar to the low-frequency taming, the features of the decoder &Dscr; are modulated by another set of taming modules, where the LL sub-band is mapped to the scale &gamma; and the concatenation of LH, HL, HH is mapped to the shift &beta;. All parameters from the pre-trained Stable Diffusion are <b>frozen</b> and only taming modules are <b>trainable</b>.
                     </p>
                   </figcaption>
             </div>
@@ -142,7 +142,8 @@
                     Reference
                 </h1>
                 <p class="section-content-text">
-                    [1] Chen Chen, Qifeng Chen, Jia Xu, and Vladlen Koltun. Learning to see in the dark. <i>In Proceedings of the IEEE conference on computer vision and pattern recognition </i>, pages 3291–3300, 2018.
+                    [1] Chen Chen, Qifeng Chen, Jia Xu, and Vladlen Koltun. Learning to see in the dark. In <i>Proceedings of the IEEE conference on computer vision and pattern recognition </i>, pages 3291–3300, 2018.
+                    [2] Jianyi Wang, Zongsheng Yue, Shangchen Zhou, Kelvin CK Chan, and Chen Change Loy. Exploiting diffusion prior for real-world image super-resolution. In <i>arXiv preprint arXiv:2305.07015</i>, 2023.
                 </p>
             </div>
           
