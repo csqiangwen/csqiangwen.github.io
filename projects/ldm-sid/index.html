@@ -162,7 +162,51 @@
                       onclick="toggleimage('ldm_sid_image_1', 'exposurediff_image_1', 'ldm_sid_button_1', 'exposurediff_button_1')"
                       ><b>LDM-SID (Ours)</b></button>
                     </div>
+              </center>
+
+              </br>
+              
+              <center>
+                    <div class="compare" style="margin: 10px; width: 48%; float: left;">
+                        <!-- The after image is last -->
+                        <img class="slider-image" src="./assets/results/2_input.jpg"/>
+                        <!-- The before image is first -->
+                        <img id="exposurediff_image_2" class="slider-image" src="./assets/results/2_exposurediff.jpg"/>
+                        <img id="ldm_sid_image_2" class="slider-image" style="display: none;" src="./assets/results/2_ours.jpg"/>
+                    </div>
                 </center>
+              
+              <center>
+                  <div class="compare" style="margin: 10px; width: 48%; float: right;">
+                      <!-- The after image is last -->
+                      <img class="slider-image" src="./assets/results/3_input.jpg"/>
+                      <!-- The before image is first -->
+                      <img id="exposurediff_image_3" class="slider-image" src="./assets/results/3_exposurediff.jpg"/>
+                      <img id="ldm_sid_image_3" class="slider-image" style="display: none;" src="./assets/results/3_ours.jpg"/>
+                  </div>
+              </center>
+               </br>
+              <center>
+                  <div style="width: 48%; display: inline-block; margin-bottom: 9px; float: left;">
+                    <button class="btn active" id="exposurediff_button_2" style="width: 33%;  margin: 1px; padding: 0; text-align: center; float: center;"
+                    onclick="toggleimage('exposurediff_image_2', 'ldm_sid_image_2', 'exposurediff_button_2', 'ldm_sid_button_2')"
+                    >ExposureDiffusion</button>
+                    <button class="btn" id="ldm_sid_button_2" style="width: 33%;  margin: 1px; padding: 0; text-align: center; float: center;"
+                    onclick="toggleimage('ldm_sid_image_2', 'exposurediff_image_2', 'ldm_sid_button_2', 'exposurediff_button_2')"
+                    ><b>LDM-SID (Ours)</b></button>
+                  </div>
+              </center>
+              <center>
+                    <div style="width: 48%; display: inline-block; margin-bottom: 9px; float: right;">
+                      <button class="btn active" id="exposurediff_button_3" style="width: 33%;  margin: 1px; padding: 0; text-align: center; float: center;"
+                      onclick="toggleimage('exposurediff_image_3', 'ldm_sid_image_3', 'exposurediff_button_3', 'ldm_sid_button_3')"
+                      >ExposureDiffusion</button>
+                      <button class="btn" id="ldm_sid_button_3" style="width: 33%;  margin: 1px; padding: 0; text-align: center; float: center;"
+                      onclick="toggleimage('ldm_sid_image_3', 'exposurediff_image_3', 'ldm_sid_button_3', 'exposurediff_button_3')"
+                      ><b>LDM-SID (Ours)</b></button>
+                    </div>
+                </center>
+                
                 
               </div>
 
@@ -171,7 +215,9 @@
                     Reference
                 </h1>
                 <p class="section-content-text">
-                [1] Chen Chen, Qifeng Chen, Jia Xu, and Vladlen Koltun. Learning to see in the dark. In <i>Proceedings of the IEEE conference on computer vision and pattern recognition </i>, pages 3291–3300, 2018.
+                [1] Chen Chen, Qifeng Chen, Jia Xu, and Vladlen Koltun. Learning to see in the dark. In <i>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition </i>, pages 3291–3300, 2018.
+                </br>
+                [2] Yufei Wang, Yi Yu, Wenhan Yang, Lanqing Guo, Lap-Pui Chau, Alex C Kot, and Bihan Wen. Exposurediffusion: Learning to expose for low-light image enhancement. In <i>Proceedings of the IEEE/CVF International Conference on Computer Vision </i>, pages 12438–12448, 2023.
                 </p>
             </div>
 
