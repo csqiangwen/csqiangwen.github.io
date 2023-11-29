@@ -99,6 +99,11 @@
 
         <!-- Paper Information -->
         <div class="root-content" style="padding-top: 30px;">
+            <!-- Teaser -->
+            <div style="padding-top: 20px;">
+                <center><img src="assets/Teaser.jpg" width="800"/></center>
+            </div>
+            
             <div class="section-content">
             <h1 class="section-name"> Abstract </h1>
                 <p class="section-content-text">
@@ -114,25 +119,8 @@
                       The overview of our proposed LLIE method, <b>LDM-SID</b>. The Bayer RAW image is processed by similar operations mentioned by Chen et al.. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale $\gamma$ and shift $\beta$ parameters. Similar to the low-frequency taming, the features of the decoder $\mathcal{D}$ are modulated by another set of taming modules, where the LL sub-band is mapped to the scale $\gamma$ and the concatenation of LH, HL, HH is mapped to the shift $\beta$. All parameters from the pre-trained Stable Diffusion are <b>frozen</b> and only taming modules are <b>trainable</b>.
                     </p>
                   </figcaption>
-                
             </div>
-
-            <div style="padding-top: 20px;">
-                <h1 class="section-name">
-                    Discussion on "Why Two Pairs"?
-                </h1>
-                <center><img src="assets/fewshot_list.svg" height="220"/><img src="assets/two_pairs.svg" height="220"/></center>
-                <p class="section-content-text">
-                    The left figure shows the performance of LED as it varies with the number of few-shot data pairs. Notice that when using only one data pair for fine-tuning, LED's performance is not as high as ELD. However, with two data pairs, LED's performance significantly surpasses that of ELD.
-                    <br/><br/>
-                    Indeed, this is because the camera's gain and noise variance have a linear relationship, as illustrated in the right graph. With just two pairs of images, LED can effectively learn this linear relationship, as two points are enough to determine a straight line.
-                    <br/><br/>
-                    However, due to the presence of errors, the horizontal coordinates of these two points need to be sufficiently different. In other words, the two pairs of images used by LED should have a significant difference in their ISO settings at the time of capture (ISO &lt; 500 and ISO &gt; 5000).
-                    <br/><br/>
-                    More details (including validation experiments) can be found in our main paper.
-                </p>
-            </div>
-
+          
             <!-- <div style="padding-top: 20px;">
                 <h1 class="section-name">Acknowledgements</h1>
                 <p class="section-content-text"></p>
