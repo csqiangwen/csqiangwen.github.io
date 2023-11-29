@@ -97,111 +97,12 @@
             </div>
         </div>
 
-
-        <!-- Visual Results -->
-        <div style="background-color: #f5f5f5; margin-right: auto; margin-left: auto;">
-            <div class="root-content" style="padding-top: 10px;">
-                <h1 class="section-name">&#128293; Tired for Calibrating the Noise Model? Try Our LED! &#128293;</h1>
-                <span class="section-name" style="font-size: xx-large;">2 pairs<span style="color: darkgray; font-size: small;"> for each ratio</span> + 1.5k iterations = SOTA Performance!</span>
-                <details>
-                    <summary> Click for more details</summary>
-                    Compared with the SOTA <a href="https://github.com/Vandermode/ELD">ELD (CVPR, 2020, Oral)</a> (left), LED (right) only requires <strong style="color: brown;">0.26% of the training time</strong> (and <strong style="color: brown;">5% of the training data</strong>, which denotes the data requirement for calibration in ELD), while demonstrating a significant performance improvement on the <a href="https://cchen156.github.io/SID.html">SID</a> Sony dataset!
-                    <table style="border: 0px black solid; border-top: 0;">
-                        <tbody>
-                            <tr>
-                                <td style="padding: 10px; width:510; text-align: left;"><img width="500" src="./assets/log/log_eld.png"/></td>
-                                <td style="padding: 10px; width:510; text-align: right;"><img width="500" src="./assets/log/log_led.png"/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </details>
-                <p class="section-content-text">
-                    Compared to previous algorithms that require a large amount of paired data for training (or requires extensive calibrating), 
-                    LED only needs two pairs of data for each ratio (<span style="color:brown;">six pairs</span> in total) and 1.5k iterations (<span style="color:brown;">0.5% of previous method</span>) to achieve state-of-the-art (SOTA) performance!
-                    Also, LED has reduced the training time from nearly one day to <span style="color:brown;">less than 4 minutes</span>!
-                    <p style="font-size: large;">Here are some results with LED.</p>
-                </p>
-                
-                <div style="width: 100%; display: inline-block;">
-                <center>
-                <div class="compare" style="margin: 10px; width: 48%; float: left;">
-                    <!-- The after image is last -->
-                    <img class="slider-image" src="./assets/results/10185_00_0.1s/10185_00_0.1s.ARW.jpg"/>
-                     <!-- The before image is first -->
-                    <img class="slider-image" src="./assets/results/10185_00_0.1s/10185_00_0.1s.ARW_1502.png"/>
-                </div>
-                </center>
-                <center>
-                <div class="compare" style="margin: 10px; width: 48%; float: right;">
-                    <!-- The after image is last -->
-                    <img class="slider-image" src="./assets/results/10199_00_0.1s/10199_00_0.1s.ARW.jpg"/>
-                     <!-- The before image is first -->
-                    <img class="slider-image" src="./assets/results/10199_00_0.1s/10199_00_0.1s.ARW_1502.png"/>
-                </div>
-                </center><br/>
-
-                <center>
-                    <div class="compare" style="margin: 10px; width: 48%; float: left;">
-                        <!-- The after image is last -->
-                        <img class="slider-image" src="./assets/results/10105_00_0.1s/10105_00_0.1s.ARW.jpg"/>
-                         <!-- The before image is first -->
-                        <img class="slider-image" src="./assets/results/10105_00_0.1s/10105_00_0.1s.ARW_1502.png"/>
-                    </div>
-                </center>
-                <center>
-                    <div class="compare" style="margin: 10px; width: 48%; float: right;">
-                        <!-- The after image is last -->
-                        <img class="slider-image" src="./assets/results/10077_00_0.1s/10077_00_0.1s.ARW.jpg"/>
-                         <!-- The before image is first -->
-                        <img class="slider-image" src="./assets/results/10077_00_0.1s/10077_00_0.1s.ARW_1502.png"/>
-                    </div>
-                </center>
-                </div>
-
-                <h1 class="section-name">🤖️ Powerful Ability to Remove Out-Of-Model Noise!</h1>
-                <details>
-                    <summary> Click for more details</summary>
-                    Due to the previous state-of-the-art (SOTA) <a href="https://github.com/Vandermode/ELD">ELD (CVPR, 2020, Oral)</a> being trained solely on synthetic noise, it is unable to handle noise caused by the lens aperture (which is a kind of out-of-model noise).
-                </details>
-                <p class="section-content-text">
-                    Due to fine-tuning with the few-shot real data pairs, our LED can remove noise that was not predefined in the noise model (denoted out-of-model noise), which is also an inherent limitation of calibration-based algorithms.
-                </p>
-
-                <div>
-                    <center>
-                        <div class="compare" style="margin: 10px; width: 80%;">
-                            <!-- The after image is last -->
-                            <img class="slider-image" src="./assets/results/10140_00_0.1s/10140_00_0.1s.ARW.jpg"/>
-                            <!-- The before image is first -->
-                            <img id="eld_image" class="slider-image" src="./assets/results/10140_00_0.1s/10140_00_0.1s.ARW_0_eld_38.8426.jpg"/>
-                            <img id="led_image" class="slider-image" style="display: none;" src="./assets/results/10140_00_0.1s/10140_00_0.1s.ARW_5_cf_39.4064.jpg"/>
-                        </div>
-                    </center>
-            
-                    <div style="width: 80%; display: inline-block; margin-bottom: 9px;">
-                        <button class="btn active" id="eld_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
-                        onclick="toggleimage('eld_image', 'led_image', 'eld_button', 'led_button')"
-                        >ELD</button>
-                        <button class="btn" id="led_button" style="width: 20%;  margin: 1px; padding: 0; text-align: center; float: right;"
-                        onclick="toggleimage('led_image', 'eld_image', 'led_button', 'eld_button')"
-                        ><strong>LED (Ours)</strong></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Paper Information -->
         <div class="root-content" style="padding-top: 30px;">
             <div class="section-content">
-                <h1 class="section-name"> Video </h1>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jo8OTAnUYkU?si=mewWnZohYKfRNxiz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-
-            <div class="section-content">
             <h1 class="section-name"> Abstract </h1>
-                <center><img src="assets/teaser.svg" width="600"/></center>
                 <p class="section-content-text">
-                    Calibration-based methods (left) have dominated RAW image denoising under extremely low-light environments. However, these methods suffer from several main deficiencies: 1) the calibration procedure is laborious and time-consuming, 2) denoisers for different cameras are difficult to transfer, and 3) the discrepancy between synthetic noise and real noise is enlarged by high digital gain. To overcome the above shortcomings, we propose a calibration-free pipeline for <span style="color: red;">L</span>ighting <span style="color: red;">E</span>very <span style="color: red;">D</span>arkness (<span style="color: red;">LED</span>) (right), regardless of the digital gain or camera sensor. Instead of calibrating the noise parameters and training repeatedly, our method could adapt to a target camera only with few-shot paired data and fine-tuning. In addition, well-designed structural modification during both stages alleviates the domain gap between synthetic and real noise without any extra computational cost. With 2 pairs for each additional digital gain (in total <b style="color: red;">6 pairs</b>) and <b style="color: red;">0.5%</b> iterations, our method achieves superior performance over other calibration-based methods.
+                  Enhancing a low-light noisy RAW image into a well-exposed and clean sRGB image is a significant challenge in computational photography. Due to the limitation of large-scale paired data, prior approaches have difficulty in recovering fine details and true colors in extremely low-light regions. Meanwhile, recent advancements in generative diffusion models have shown promising generating capabilities, which inspires this work to explore generative priors from a diffusion model trained on a large-scale open-domain dataset to benefit the low-light image enhancement (LLIE) task. Based on this intention, we propose a novel diffusion-model-based LLIE method, dubbed LDM-SID. LDM-SID aims at inserting a set of proposed taming modules into a frozen pre-trained diffusion model to steer its generating process. Specifically, the taming module fed with low-light information serves to output a pair of affine transformation parameters to modulate the intermediate feature in the diffusion model. Additionally, based on the observation of dedicated generative priors across different portions of the diffusion model, we propose to apply 2D discrete wavelet transforms on the input RAW image, resulting in dividing the LLIE task into two essential parts: low-frequency content generation and high-frequency detail maintenance. This enables us to skillfully tame the diffusion model for optimized structural generation and detail enhancement. Extensive experiments demonstrate the proposed method not only achieves state-of-the-art performance in quantitative evaluations but also shows significant superiority in visual comparisons. These findings highlight the effectiveness of leveraging a pre-trained diffusion model as a generative prior to the LLIE task.
                 </p>
             </div>
 
