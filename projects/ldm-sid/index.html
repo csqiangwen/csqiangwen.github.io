@@ -110,10 +110,7 @@
                 <h1 class="section-name">Method</h1>
                 <center><img src="assets/Framework.png" width="800"/></center>
                 <p class="section-content-text">
-                    <details>
-                        <summary>Detailed Description</summary>
-                        <p> {text-align: left}The overview of our proposed LLIE method, LDM-SID. The Bayer RAW image is processed by similar operations mentioned by Chen et al.. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale $\gamma$ and shift $\beta$ parameters. Similar to the low-frequency taming, the features of the decoder $\mathcal{D}$ are modulated by another set of taming modules, where the LL sub-band is mapped to the scale $\gamma$ and the concatenation of LH, HL, HH is mapped to the shift $\beta$. All parameters from the pre-trained Stable Diffusion are \textbf{frozen} and only taming modules are \textbf{trainable}.</p>
-                    </details>
+                  The overview of our proposed LLIE method, <b>LDM-SID</b>. The Bayer RAW image is processed by similar operations mentioned by Chen et al.. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale $\gamma$ and shift $\beta$ parameters. Similar to the low-frequency taming, the features of the decoder $\mathcal{D}$ are modulated by another set of taming modules, where the LL sub-band is mapped to the scale $\gamma$ and the concatenation of LH, HL, HH is mapped to the shift $\beta$. All parameters from the pre-trained Stable Diffusion are <b>frozen</b> and only taming modules are <b>trainable</b>.
                 </p>
             </div>
 
@@ -130,15 +127,6 @@
                     However, due to the presence of errors, the horizontal coordinates of these two points need to be sufficiently different. In other words, the two pairs of images used by LED should have a significant difference in their ISO settings at the time of capture (ISO &lt; 500 and ISO &gt; 5000).
                     <br/><br/>
                     More details (including validation experiments) can be found in our main paper.
-                </p>
-            </div>
-
-            <div style="padding-top: 20px;">
-                <h1 class="section-name">
-                    Customize a Denoiser for Your 📷!
-                </h1>
-                <p class="section-content-text">
-                    We are currently dedicated to training an exceptionally capable network that can generalize well to various scenarios using <strong style="color: brown;">only two data pairs</strong>! We will update this section once we achieve our goal. Stay tuned and look forward to it!
                 </p>
             </div>
 
