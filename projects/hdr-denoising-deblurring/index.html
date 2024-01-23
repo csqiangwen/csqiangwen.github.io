@@ -48,12 +48,12 @@
             <div id="author-list">
                 Qiang Wen<sup>1</sup>&nbsp;&nbsp;&nbsp;
                 Zhenfan Rao<sup>1</sup>&nbsp;&nbsp;&nbsp;
-                Chenyang Lei<sup>2</sup>&nbsp;&nbsp;&nbsp;
-                Wenxiu Sun<sup>3</sup>&nbsp;&nbsp;&nbsp;
+                <a hef="https://chenyanglei.github.io/">Chenyang Lei</a><sup>2</sup>&nbsp;&nbsp;&nbsp;
+                <a hef="http://wenxiusun.com/">Wenxiu Sun</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
                 Qiong Yan<sup>3</sup>&nbsp;&nbsp;&nbsp;
                 Jing Li<sup>3</sup>&nbsp;&nbsp;&nbsp;
                 Fei Lei<sup>3</sup>&nbsp;&nbsp;&nbsp;
-                Qifeng Chen<sup>1</sup>&nbsp;&nbsp;&nbsp;
+                <a href="https://cqf.io/">Qifeng Chen</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
             </div>
             <div id="institution-list">
                 <sup>1</sup> HKUST&nbsp;&nbsp;&nbsp;
@@ -92,7 +92,6 @@
             <figcaption>
                 <p class="section-content-text">
                   <font size="-1">
-                  An extremely low-light real-world image from SID Dataset [1] with a ×300 amplification ratio. The image processed by our proposed method exhibits clear improvement in structural content, showcasing finer details compared to previous works. The description generated for each image by InstructBLIP [3] also suggests that our result provides higher quality to downstream tasks.
                   </font>
                 </p>
             </figcaption>
@@ -100,7 +99,6 @@
             <div class="section-content">
             <h1 class="section-name"> Abstract </h1>
                 <p class="section-content-text">
-                  Enhancing a low-light noisy RAW image into a well-exposed and clean sRGB image is a significant challenge in computational photography. Due to the limitation of large-scale paired data, prior approaches have difficulty in recovering fine details and true colors in extremely low-light regions. Meanwhile, recent advancements in generative diffusion models have shown promising generating capabilities, which inspires this work to explore generative priors from a diffusion model trained on a large-scale open-domain dataset to benefit the low-light image enhancement (LLIE) task. Based on this intention, we propose a novel diffusion-model-based LLIE method, dubbed LDM-SID. LDM-SID aims at inserting a set of proposed taming modules into a frozen pre-trained diffusion model to steer its generating process. Specifically, the taming module fed with low-light information serves to output a pair of affine transformation parameters to modulate the intermediate feature in the diffusion model. Additionally, based on the observation of dedicated generative priors across different portions of the diffusion model, we propose to apply 2D discrete wavelet transforms on the input RAW image, resulting in dividing the LLIE task into two essential parts: low-frequency content generation and high-frequency detail maintenance. This enables us to skillfully tame the diffusion model for optimized structural generation and detail enhancement. Extensive experiments demonstrate the proposed method not only achieves state-of-the-art performance in quantitative evaluations but also shows significant superiority in visual comparisons. These findings highlight the effectiveness of leveraging a pre-trained diffusion model as a generative prior to the LLIE task.
                 </p>
             </div>
 
@@ -110,7 +108,6 @@
                   <figcaption>
                     <p class="section-content-text">
                       <font size="-1">
-                      The overview of our proposed LLIE method, <b>LDM-SID</b>. The Bayer RAW image is processed by similar operations mentioned in [1]. A series of 2D discrete wavelet transforms (DWT) is applied to the processed image for capturing the low-frequency (LL) and high-frequency subbands (LH, HL, HH). The low-frequency subband (LL) serves to modulate the feature at each layer in the LDM. Specifically, each feature has its corresponding taming module, whose key part is an SFT layer, to map the sub-band into a pair of scale &gamma; and shift &beta; parameters. Similar to the low-frequency taming, the features of the decoder &Dscr; are modulated by another set of taming modules, where the LL sub-band is mapped to the scale &gamma; and the concatenation of LH, HL, HH is mapped to the shift &beta;. All parameters from the pre-trained Stable Diffusion are <b>frozen</b> and only taming modules are <b>trainable</b>.
                       </font>
                     </p>
                   </figcaption>
