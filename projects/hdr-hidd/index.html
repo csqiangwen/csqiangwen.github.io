@@ -91,41 +91,6 @@
 
     <!-- Paper Information -->
     <div class="root-content" style="padding-top: 30px;">
-      <!-- Teaser -->
-      <center><img src="assets/Teaser.jpg" width="800"/></center>
-      <figcaption>
-        <p class="section-content-text">
-          <font size="-1">
-          An extremely low-light real-world image from SID Dataset [1] with a ×300 amplification ratio. The image processed by our proposed method exhibits clear improvement in structural content, showcasing finer details compared to previous works.
-          </font>
-        </p>
-      </figcaption>
-    
-      <div class="section-content">
-        <h1 class="section-name"> Abstract </h1>
-        <p class="section-content-text">
-          Considerable progress has been made in high dynamic range (HDR) image reconstruction from multi-exposure low dynamic range (LDR) frames in recent years; however, despite handling misalignment among LDR frames and achieving satisfactory HDR results, previous studies pay less attention to the significant noise and motion blur present in multi-exposure frames captured by handheld cameras, so to overcome these extensive and challenging corruptions, we address HDR imaging from two key aspects: first, due to the absence of related datasets, previous learning-based methods struggle with high-quality HDR imaging when input LDR frames contain real-world noise and motion blur, leading us to propose the first realistic dataset based on the real-world burst imaging pipeline for training and evaluating methods in joint HDR imaging, denoising, and deblurring tasks; second, recognizing the corruption-insensitivity of previous network architectures, we propose a novel and efficient attention-based multi-exposure HDR imaging method that skillfully selects optimal (clean or sharp) information from corrupted LDR inputs using a customized cross-attention mechanism to generate HDR information, and to enhance the robustness of this mechanism, we introduce a novel Entropy Decreasing loss (ED loss) that reduces the entropy of the attention map to alleviate ghosting artifacts during multi-exposure fusion, with extensive experimental results demonstrating that our method trained on the proposed dataset surpasses related state-of-the-art methods in real-world photography quality.
-        </p>
-      </div>
-
-      <div style="padding-top: 20px;">
-        <h1 class="section-name">Method</h1>
-        <center><img src="assets/framework.jpg" width="800"/></center>
-        <figcaption>
-          <p class="section-content-text">
-            <font size="-1">
-            The left part shows an overview of the proposed method. The exposure value of LDR frames varies in [−2.0, +2.0]. The short-, medium-, and long-exposure LDR input frames are marked with blue, orange, and yellow lines. The input LDR frames are converted into the HDR domain through “Domain Conversion” and fed into the HDR-aware Fusion Module to produce a preliminary HDR feature &phi;<sub>H</sub>. Then, the HDR feature &phi;<sub>H</sub> containing remaining noise and motion blur is refined by integrating the superiority of the original LDR frames in the HDR-aware Restoration Module to produce our target HDR output &tilde;H. The right part shows our efficient customized cross-attention mechanism, which is based on element-wise attention calculation.
-            </font>
-          </p>
-        </figcaption>
-      </div>
-    
-      <div style="padding-top: 20px;">
-        <h1 class="section-name">Visualized Comparison</h1>
-      </div>
-
-      <div style="width: 100%; padding-top: 20px;">
-
       <!-- Comparison Block 1 -->
       <div class="visualization-block" style="margin-bottom: 40px;">
         <!-- Big slider container -->
@@ -232,24 +197,42 @@
         showImage(1, 'input');
       });
     </script>
+    
+      <div class="section-content">
+        <h1 class="section-name"> Abstract </h1>
+        <p class="section-content-text">
+          Considerable progress has been made in high dynamic range (HDR) image reconstruction from multi-exposure low dynamic range (LDR) frames in recent years; however, despite handling misalignment among LDR frames and achieving satisfactory HDR results, previous studies pay less attention to the significant noise and motion blur present in multi-exposure frames captured by handheld cameras, so to overcome these extensive and challenging corruptions, we address HDR imaging from two key aspects: first, due to the absence of related datasets, previous learning-based methods struggle with high-quality HDR imaging when input LDR frames contain real-world noise and motion blur, leading us to propose the first realistic dataset based on the real-world burst imaging pipeline for training and evaluating methods in joint HDR imaging, denoising, and deblurring tasks; second, recognizing the corruption-insensitivity of previous network architectures, we propose a novel and efficient attention-based multi-exposure HDR imaging method that skillfully selects optimal (clean or sharp) information from corrupted LDR inputs using a customized cross-attention mechanism to generate HDR information, and to enhance the robustness of this mechanism, we introduce a novel Entropy Decreasing loss (ED loss) that reduces the entropy of the attention map to alleviate ghosting artifacts during multi-exposure fusion, with extensive experimental results demonstrating that our method trained on the proposed dataset surpasses related state-of-the-art methods in real-world photography quality.
+        </p>
+      </div>
 
-
+      <div style="padding-top: 20px;">
+        <h1 class="section-name">Method</h1>
+        <center><img src="assets/framework.jpg" width="800"/></center>
+        <figcaption>
+          <p class="section-content-text">
+            <font size="-1">
+            The left part shows an overview of the proposed method. The exposure value of LDR frames varies in [−2.0, +2.0]. The short-, medium-, and long-exposure LDR input frames are marked with blue, orange, and yellow lines. The input LDR frames are converted into the HDR domain through “Domain Conversion” and fed into the HDR-aware Fusion Module to produce a preliminary HDR feature &phi;<sub>H</sub>. Then, the HDR feature &phi;<sub>H</sub> containing remaining noise and motion blur is refined by integrating the superiority of the original LDR frames in the HDR-aware Restoration Module to produce our target HDR output &tilde;H. The right part shows our efficient customized cross-attention mechanism, which is based on element-wise attention calculation.
+            </font>
+          </p>
+        </figcaption>
+      </div>
+      
       <div>
         <h1 class="section-name" style="margin-top: 30px; text-align: left; font-size: 25px;">
           BibTex
         </h1>
         <a name="bib"></a>
         <pre style="margin-top: 5px;" class="bibtex">
-<code>
-@article{wen2025enhancing,
-  title={Enhancing HDR Imaging with Joint Denoising and Deblurring},
-  author={Wen, Qiang and Rao, Zhefan and Lei, Chenyang and Sun, Wenxiu and Yan, Qiong and Li, Jing and Lei, Fei and Chen, Qifeng},
-  journal={International Journal of Computer Vision},
-  pages={1--17},
-  year={2025},
-  publisher={Springer}
-}
-</code>
+        <code>
+        @article{wen2025enhancing,
+          title={Enhancing HDR Imaging with Joint Denoising and Deblurring},
+          author={Wen, Qiang and Rao, Zhefan and Lei, Chenyang and Sun, Wenxiu and Yan, Qiong and Li, Jing and Lei, Fei and Chen, Qifeng},
+          journal={International Journal of Computer Vision},
+          pages={1--17},
+          year={2025},
+          publisher={Springer}
+        }
+        </code>
         </pre>
       </div>
     
