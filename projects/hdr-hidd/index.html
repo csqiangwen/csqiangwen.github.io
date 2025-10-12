@@ -103,26 +103,26 @@
 
       <div style="width: 100%; text-align: center; position: relative; max-width: 1000px; margin: auto;">
 
-      <!-- Big image container for comparison -->
-      <div class="compare" style="position: relative; width: 100%; height: 400px; overflow: hidden; margin-bottom: 20px; border: 1px solid #ccc;">
-          <!-- After image (bottom layer) -->
-          <img id="afterImage" src="./assets/results/1_input.jpg" 
-               style="width: 100%; height: 100%; object-fit: contain; display: block; position: absolute; top: 0; left: 0;"/>
-          <!-- Before image (top layer) -->
-          <img id="beforeImage" src="./assets/results/1_ours.jpg" 
-               style="width: 100%; height: 100%; object-fit: contain; display: block; position: absolute; top: 0; left: 0;"/>
+        <!-- Big image container for comparison -->
+        <div class="compare" style="position: relative; width: 100%; height: 600px; overflow: hidden; margin-bottom: 20px; border: 1px solid #ccc;">
+            <!-- After image (bottom layer) -->
+            <img id="afterImage" src="./assets/results/1_input.jpg" 
+                 style="width: 100%; height: 100%; object-fit: contain; display: block; position: absolute; top: 0; left: 0;"/>
+            <!-- Before image (top layer) -->
+            <img id="beforeImage" src="./assets/results/1_ours.jpg" 
+                 style="width: 100%; height: 100%; object-fit: contain; display: block; position: absolute; top: 0; left: 0;"/>
         </div>
       
         <!-- Thumbnails to select comparison pairs -->
         <div>
           <img src="./assets/results/1_ours.jpg" alt="Thumbnail 1" 
-               style="width: 100px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
+               style="width: 150px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
                onclick="updateImages('./assets/results/1_input.jpg', './assets/results/1_ours.jpg')"/>
           <img src="./assets/results/2_ours.jpg" alt="Thumbnail 2" 
-               style="width: 100px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
+               style="width: 150px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
                onclick="updateImages('./assets/results/2_input.jpg', './assets/results/2_ours.jpg')"/>
           <img src="./assets/results/3_ours.jpg" alt="Thumbnail 3" 
-               style="width: 100px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
+               style="width: 150px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
                onclick="updateImages('./assets/results/3_input.jpg', './assets/results/3_ours.jpg')"/>
         </div>
       
