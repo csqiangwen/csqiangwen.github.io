@@ -101,16 +101,16 @@
         </p>
       </figcaption> -->
 
-      <div style="width: 100%; display: inline-block;">
-          <center>
-              <div class="compare" style="margin: 10px; width: 48%; float: left;">
-                  <!-- The after image is last -->
-                  <img class="slider-image" src="./assets/results/1_input.jpg"/>
-                  <!-- The before image is first -->
-                  <img id="dnf_image_0" class="slider-image" src="./assets/results/1_dnf.jpg"/>
-                  <img id="ldm_isp_image_0" class="slider-image" style="display: none;" src="./assets/results/1_ours.jpg"/>
-              </div>
-          </center>
+      <div style="width: 100%; text-align: center;">
+        <div class="compare" style="margin: 10px auto; width: 48%; position: relative; display: inline-block;">
+          <!-- The after image is last -->
+          <img class="slider-image" src="./assets/results/1_input.jpg" style="width: 100%; display: block;"/>
+          <!-- The before image is first (hidden) -->
+          <img id="ldm_isp_image_0" class="slider-image" style="display: none;" src="./assets/results/1_ours.jpg"/>
+          <!-- Thumbnail below the big image -->
+          <img src="./assets/results/1_ours.jpg" alt="Thumbnail" 
+               style="width: 100px; margin-top: 10px; cursor: pointer; display: block; margin-left: auto; margin-right: auto; border: 1px solid #ccc;"/>
+        </div>
       </div>
     
       <div class="section-content">
