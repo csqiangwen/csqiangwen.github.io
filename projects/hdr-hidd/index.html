@@ -101,16 +101,16 @@
         </p>
       </figcaption> -->
 
-      <div style="width: auto; text-align: center; position: relative; max-width: none; margin: 0 auto;">
+      <div style="width: 100%; max-width: 1000px; margin: 0 auto; text-align: center; position: relative;">
 
         <!-- Big image container for comparison -->
-        <div class="compare" style="position: relative; height: 600px; width: auto; max-width: 1000vw; overflow: hidden; margin-bottom: 20px; border: 1px solid #ccc; display: inline-block;">
+        <div class="compare" style="position: relative; width: 100%; height: auto; overflow: hidden; margin-bottom: 20px; border: 1px solid #ccc;">
           <!-- After image (bottom layer) -->
           <img id="afterImage" src="./assets/results/1_input.jpg" 
-               style="height: 100%; width: auto; object-fit: contain; display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%);"/>
+               style="width: 100%; height: auto; object-fit: contain; display: block;"/>
           <!-- Before image (top layer) -->
           <img id="beforeImage" src="./assets/results/1_ours.jpg" 
-               style="height: 100%; width: auto; object-fit: contain; display: block; position: absolute; top: 0; left: 50%; transform: translateX(-50%);"/>
+               style="width: 100%; height: auto; object-fit: contain; display: block; position: absolute; top: 0; left: 0;"/>
         </div>
       
         <!-- Thumbnails to select comparison pairs -->
@@ -125,15 +125,16 @@
                style="width: 100px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
                onclick="updateImages('./assets/results/3_input.jpg', './assets/results/3_ours.jpg')"/>
         </div>
-    
+      
       </div>
-    
+      
       <script>
         function updateImages(afterSrc, beforeSrc) {
           document.getElementById('afterImage').src = afterSrc;
           document.getElementById('beforeImage').src = beforeSrc;
         }
       </script>
+
 
 
 
