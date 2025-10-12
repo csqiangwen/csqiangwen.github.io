@@ -101,17 +101,29 @@
         </p>
       </figcaption> -->
 
-      <div style="width: 100%; text-align: center;">
+      <!-- First comparison pair -->
+      <div style="width: 100%; text-align: center; margin-bottom: 40px;">
         <div class="compare" style="margin: 10px auto; width: 48%; position: relative; display: inline-block;">
           <!-- The after image is last -->
           <img class="slider-image" src="./assets/results/1_input.jpg" style="width: 100%; display: block;"/>
-          <!-- The before images -->
+          <!-- The before image -->
           <img id="ldm_isp_image_0" class="slider-image" style="display: none; width: 100%; display: block;" src="./assets/results/1_ours.jpg"/>
-      
         </div>
       
-        <!-- Thumbnail below the big image container -->
-        <img src="./assets/results/1_ours.jpg" alt="Thumbnail" 
+        <!-- Thumbnail for first comparison pair -->
+        <img src="./assets/results/1_ours.jpg" alt="Thumbnail 1" 
+             style="width: 100px; margin-top: 10px; border: 1px solid #ccc; cursor: pointer; display: inline-block;"/>
+      </div>
+      
+      <!-- Second comparison pair -->
+      <div style="width: 100%; text-align: center; margin-bottom: 40px;">
+        <div class="compare" style="margin: 10px auto; width: 48%; position: relative; display: inline-block;">
+          <img class="slider-image" src="./assets/results/2_input.jpg" style="width: 100%; display: block;"/>
+          <img id="ldm_isp_image_1" class="slider-image" style="display: none; width: 100%; display: block;" src="./assets/results/2_ours.jpg"/>
+        </div>
+      
+        <!-- Thumbnail for second comparison pair -->
+        <img src="./assets/results/2_ours.jpg" alt="Thumbnail 2" 
              style="width: 100px; margin-top: 10px; border: 1px solid #ccc; cursor: pointer; display: inline-block;"/>
       </div>
 
