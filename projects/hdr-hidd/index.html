@@ -102,9 +102,10 @@
       </figcaption> -->
       <div style="width: 100%; display: inline-block; text-align: center;">
 
+      <div style="width: 100%; display: inline-block; text-align: center;">
+
       <!-- Big image container -->
       <div class="compare" style="margin: 10px auto; width: 600px; position: relative;">
-        <!-- Initially show input image -->
         <img id="big-image" class="slider-image" src="./assets/results/1_input.jpg" style="width: 100%; border-radius: 8px;" />
       </div>
     
@@ -112,30 +113,27 @@
       <div style="margin-top: 10px;">
         <img id="thumbnail-image" src="./assets/results/1_ours.jpg" 
              style="width: 120px; cursor: pointer; border-radius: 5px; border: 2px solid transparent;"
-             onclick="switchBigImage()" 
-             title="Click to view LDM-ISP (Ours)" />
+             onclick="toggleImage()" 
+             title="Click to toggle image" />
       </div>
     
     </div>
     
     <script>
-      // Track which image is currently shown
-      let showingInput = true;
+      let isInput = true;  // Track current image
     
-      function switchBigImage() {
+      function toggleImage() {
         const bigImage = document.getElementById('big-image');
         const thumbnail = document.getElementById('thumbnail-image');
     
-        if (showingInput) {
-          // Switch to thumbnail image in big image
-          bigImage.src = thumbnail.src;
+        if (isInput) {
+          bigImage.src = './assets/results/1_ours.jpg';
           thumbnail.style.borderColor = '#333';  // highlight thumbnail border
         } else {
-          // Switch back to input image
           bigImage.src = './assets/results/1_input.jpg';
           thumbnail.style.borderColor = 'transparent';  // remove highlight
         }
-        showingInput = !showingInput;
+        isInput = !isInput;
       }
     </script>
     
