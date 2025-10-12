@@ -101,40 +101,66 @@
         </p>
       </figcaption> -->
 
-      <div style="width: 100%; display: inline-block; text-align: center;">
-
-      <!-- Big image container -->
-      <div class="compare" style="margin: 10px auto; width: 600px; position: relative;">
-        <img id="big-image" class="slider-image" src="./assets/results/1_input.jpg" style="width: 100%; border-radius: 8px;" />
+      <style>
+          .container {
+            position: relative;
+            width: 600px; /* adjust as needed */
+            height: 400px; /* adjust as needed */
+            margin: 20px auto;
+            overflow: hidden;
+            user-select: none;
+          }
+          .container img {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+          }
+          .overlay {
+            width: 100%;
+            overflow: hidden;
+          }
+          .slider {
+            position: absolute;
+            top: 0; left: 100%;
+            width: 4px;
+            height: 100%;
+            background: #2196F3;
+            cursor: ew-resize;
+            transform: translateX(-50%);
+          }
+    </style>
+    
+      <div class="container" id="comp">
+        <img src="./assets/results/1_ours.jpg" alt="After" />
+        <div class="overlay" id="overlay" style="width: 100%;">
+          <img src="./assets/results/1_input.jpg" alt="Before" />
+        </div>
+        <div class="slider" id="slider"></div>
       </div>
-    
-      <!-- Thumbnail below -->
-      <div style="margin-top: 10px;">
-        <img id="thumbnail-image" src="./assets/results/1_ours.jpg" 
-             style="width: 120px; cursor: pointer; border-radius: 5px; border: 2px solid transparent;"
-             onclick="toggleImage()" 
-             title="Click to toggle image" />
-      </div>
-    
-    </div>
-    
-    <script>
-      let isInput = true;  // Track current image
-    
-      function toggleImage() {
-        const bigImage = document.getElementById('big-image');
-        const thumbnail = document.getElementById('thumbnail-image');
-    
-        if (isInput) {
-          bigImage.src = './assets/results/1_ours.jpg';
-          thumbnail.style.borderColor = '#333';  // highlight thumbnail border
-        } else {
-          bigImage.src = './assets/results/1_input.jpg';
-          thumbnail.style.borderColor = 'transparent';  // remove highlight
-        }
-        isInput = !isInput;
-      }
-    </script>
+      
+      <script>
+        const container = document.getElementById('comp');
+        const overlay = document.getElementById('overlay');
+        const slider = document.getElementById('slider');
+        let dragging = false;
+      
+        // Start with overlay full width (showing input image fully)
+        overlay.style.width = '100%';
+        slider.style.left = '100%';
+      
+        slider.addEventListener('mousedown', () => dragging = true);
+        window.addEventListener('mouseup', () => dragging = false);
+        window.addEventListener('mousemove', e => {
+          if (!dragging) return;
+          const rect = container.getBoundingClientRect();
+          let pos = e.clientX - rect.left;
+          if (pos < 0) pos = 0;
+          if (pos > rect.width) pos = rect.width;
+          overlay.style.width = pos + 'px';
+          slider.style.left = pos + 'px';
+        });
+      </script>
     
       <div class="section-content">
         <h1 class="section-name"> Abstract </h1>
