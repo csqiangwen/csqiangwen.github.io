@@ -106,10 +106,10 @@
         <!-- Big image container for comparison -->
         <div class="compare" style="position: relative; width: 100%; height: auto; overflow: hidden; margin-bottom: 20px; border: 1px solid #ccc;">
           <!-- After image (bottom layer) -->
-          <img id="afterImage" src="./assets/results/1_input.jpg" 
+          <img id="afterImage" src="./assets/results/0_input.jpg" 
                style="width: 100%; height: auto; object-fit: contain; display: block;"/>
           <!-- Before image (top layer) -->
-          <img id="beforeImage" src="./assets/results/1_ours.jpg" 
+          <img id="beforeImage" src="./assets/results/0_result.jpg" 
                style="width: 100%; height: auto; object-fit: contain; display: block; position: absolute; top: 0; left: 0;"/>
         </div>
       
@@ -117,7 +117,7 @@
         <div>
           <img src="./assets/results/1_ours.jpg" alt="Thumbnail 1" 
                style="width: 100px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
-               onclick="updateImages('./assets/results/1_input.jpg', './assets/results/1_ours.jpg')"/>
+               onclick="updateImages('./assets/results/0_input.jpg', './assets/results/0_result.jpg')"/>
           <img src="./assets/results/2_ours.jpg" alt="Thumbnail 2" 
                style="width: 100px; border: 1px solid #ccc; cursor: pointer; margin: 0 5px;"
                onclick="updateImages('./assets/results/2_input.jpg', './assets/results/2_ours.jpg')"/>
