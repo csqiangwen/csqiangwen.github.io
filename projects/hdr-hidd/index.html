@@ -181,6 +181,18 @@
         </figcaption>
       </div>
 
+      <div style="padding-top: 20px;">
+        <h1 class="section-name">Training Strategy</h1>
+        <center><img src="assets/training_strategy.jpg" width="1000"/></center>
+        <figcaption>
+          <p class="section-content-text">
+            <font size="-1">
+            The proposed pseudo-GT supervision strategy on the proposed dataset. For dynamic scenes, the input LDRs (blurry) and LDRs (sharp) are from the data generation pipeline. At the round n, we first solely train the network on static scenes with clean ground truths for HDR imaging and denoising. Then we duplicate the trained network into two separate ones. During training on dynamic scenes, the learnable network is trained for HDR imaging and deblurring; Meanwhile, the fixed network is not optimized all the time. For each dynamic scene, the fixed network is utilized to generate a denoised and sharp HDR result, which is treated as the pseudo ground truth for the learnable network.
+            </font>
+          </p>
+        </figcaption>
+      </div>
+
       <div>
         <h1 class="section-name" style="margin-top: 30px; text-align: left; font-size: 25px;">
           BibTex
